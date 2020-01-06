@@ -32,10 +32,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 
-flag = True
-if (nltk.corpus.stopwords.words('english')): flag = false
-
-if flag : nltk.download('stopwords')
 def CleanedInputLemma(x):
     sw = set()
     sw.update(tuple(nltk.corpus.stopwords.words('english')))
