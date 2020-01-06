@@ -32,6 +32,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 
+flag = True
+if (nltk.corpus.stopwords.words('english')): flag = false
+
+if flag : nltk.download('stopwords')
 def CleanedInputLemma(x):
     sw = set()
     sw.update(tuple(nltk.corpus.stopwords.words('english')))
@@ -70,7 +74,6 @@ def word_averaging(wv, words):
 
 def  word_averaging_list(wv, text_list):
     return np.vstack([word_averaging(wv, review) for review in text_list ])
-print(pipreqs)
 st.title('PROJET 5 - Martin Vielvoye')
 print("new print \n \n")
 genre = st.sidebar.radio(
@@ -114,7 +117,6 @@ if(input != ""):
         temp.append(''.join(strin))
     clean_arr = temp
 
-    print("been here")
     bi_vectorizer = CountVectorizer(analyzer='word', ngram_range=(2, 2))
     bi_vect = bi_vectorizer.fit_transform(clean_arr)
     bi_vecto = bi_vectorizer.transform(clean_input)
