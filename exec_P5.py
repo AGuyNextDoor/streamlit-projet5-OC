@@ -155,20 +155,23 @@ print("bi vecto is : ", bi_vecto.toarray())
 # np.where(predict_rdf[0] == 1)[0]
 # for values in np.where(predict_rdf[0] == 1)[0]:
 #     st.text(y_tags.iloc[values].values[0])
-
+"Not available in online version"
+"DF model too large for github hosting"
 
 '''
 ## k-Neighbors
 '''
-# embedding
-neigh = joblib.load('./kN_fit.txt')
-predict_neigh = neigh.predict(X_predict)
-
-"prediction is ", predict_neigh
-"Predicted tags are : "
-np.where(predict_neigh[0] == 1)[0]
-for values in np.where(predict_neigh[0] == 1)[0]:
-    st.text(y_tags.iloc[values].values[0])
+# # embedding
+# neigh = joblib.load('./kN_fit.txt')
+# predict_neigh = neigh.predict(X_predict)
+#
+# "prediction is ", predict_neigh
+# "Predicted tags are : "
+# np.where(predict_neigh[0] == 1)[0]
+# for values in np.where(predict_neigh[0] == 1)[0]:
+#     st.text(y_tags.iloc[values].values[0])
+"Not available in online version"
+"k neighbors model too large for github hosting"
 
 '''
 ## MLP
